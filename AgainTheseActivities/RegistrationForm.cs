@@ -33,14 +33,6 @@ namespace AgainTheseActivities
             set { passwordField.Text = value; }
         }
 
-        private void OpenSignIn_Click(object sender, EventArgs e)
-        {
-            LogInForm loginForm = new();
-            loginForm.Show();
-
-            this.Hide();
-        }
-
         private void buttonSignIn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(Login) || string.IsNullOrEmpty(Password))
@@ -49,6 +41,7 @@ namespace AgainTheseActivities
                 return;
             }
 
+            //Регистрация прошла успешно
             if (User.Register(Login, Password))
             {
                 MainForm mainForm = new(Login);
@@ -56,6 +49,15 @@ namespace AgainTheseActivities
 
                 this.Hide();
             }
+        }
+
+        //Открыть форму авторизации
+        private void OpenSignIn_Click(object sender, EventArgs e)
+        {
+            LogInForm loginForm = new();
+            loginForm.Show();
+
+            this.Hide();
         }
     }
 }

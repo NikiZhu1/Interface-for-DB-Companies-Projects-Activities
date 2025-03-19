@@ -27,13 +27,13 @@ namespace AgainTheseActivities
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-
             if (string.IsNullOrEmpty(Login) || string.IsNullOrEmpty(Password))
             {
                 MessageBox.Show("Все поля должны быть заполнены!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+            //Авторизация
             if (User.Login(Login, Password))
             {
                 MainForm mainForm = new(Login);
@@ -47,6 +47,7 @@ namespace AgainTheseActivities
             }
         }
 
+        //Открыть форму регистрации
         private void OpenRegister_Click(object sender, EventArgs e)
         {
             RegistrationForm regForm = new();

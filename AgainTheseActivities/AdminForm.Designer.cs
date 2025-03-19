@@ -28,21 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listView1 = new ListView();
+            usersList = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
             columnHeader4 = new ColumnHeader();
             SuspendLayout();
             // 
-            // listView1
+            // usersList
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-            listView1.Location = new Point(1, 1);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(798, 411);
-            listView1.TabIndex = 0;
-            listView1.UseCompatibleStateImageBehavior = false;
+            usersList.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            usersList.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+            usersList.FullRowSelect = true;
+            usersList.GridLines = true;
+            usersList.Location = new Point(1, 1);
+            usersList.Name = "usersList";
+            usersList.Size = new Size(809, 411);
+            usersList.TabIndex = 0;
+            usersList.UseCompatibleStateImageBehavior = false;
+            usersList.View = View.Details;
             // 
             // columnHeader1
             // 
@@ -64,16 +68,17 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(listView1);
+            ClientSize = new Size(811, 450);
+            Controls.Add(usersList);
             Name = "AdminForm";
             Text = "AdminForm";
+            Load += AdminForm_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private ListView listView1;
+        private ListView usersList;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
