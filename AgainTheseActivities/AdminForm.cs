@@ -49,9 +49,9 @@ namespace AgainTheseActivities
                 reader.Close();
                 db.CloseConnection();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"Ошибка при загрузке пользователей: {ex.Message}", "Ошибка",
+                MessageBox.Show($"Ошибка при загрузке пользователей!", "Ошибка",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
