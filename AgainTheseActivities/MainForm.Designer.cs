@@ -28,8 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             treeView = new TreeView();
             button1 = new Button();
+            CompanyContextMenu = new ContextMenuStrip(components);
+            добавитьToolStripMenuItem = new ToolStripMenuItem();
+            изменитьToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripSeparator();
+            удалитьToolStripMenuItem = new ToolStripMenuItem();
+            ProjectContextMenu = new ContextMenuStrip(components);
+            toolStripMenuItem2 = new ToolStripMenuItem();
+            toolStripMenuItem3 = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            toolStripMenuItem4 = new ToolStripMenuItem();
+            ActivityContextMenu = new ContextMenuStrip(components);
+            toolStripMenuItem5 = new ToolStripMenuItem();
+            toolStripMenuItem6 = new ToolStripMenuItem();
+            toolStripSeparator2 = new ToolStripSeparator();
+            toolStripMenuItem7 = new ToolStripMenuItem();
+            CompanyContextMenu.SuspendLayout();
+            ProjectContextMenu.SuspendLayout();
+            ActivityContextMenu.SuspendLayout();
             SuspendLayout();
             // 
             // treeView
@@ -49,15 +68,105 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // Form1
+            // CompanyContextMenu
+            // 
+            CompanyContextMenu.Items.AddRange(new ToolStripItem[] { добавитьToolStripMenuItem, изменитьToolStripMenuItem, toolStripMenuItem1, удалитьToolStripMenuItem });
+            CompanyContextMenu.Name = "CompanyContextMenu";
+            CompanyContextMenu.Size = new Size(189, 76);
+            // 
+            // добавитьToolStripMenuItem
+            // 
+            добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
+            добавитьToolStripMenuItem.Size = new Size(188, 22);
+            добавитьToolStripMenuItem.Text = "Добавить компанию";
+            // 
+            // изменитьToolStripMenuItem
+            // 
+            изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
+            изменитьToolStripMenuItem.Size = new Size(188, 22);
+            изменитьToolStripMenuItem.Text = "Изменить";
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(185, 6);
+            // 
+            // удалитьToolStripMenuItem
+            // 
+            удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            удалитьToolStripMenuItem.Size = new Size(188, 22);
+            удалитьToolStripMenuItem.Text = "Удалить";
+            // 
+            // ProjectContextMenu
+            // 
+            ProjectContextMenu.Items.AddRange(new ToolStripItem[] { toolStripMenuItem2, toolStripMenuItem3, toolStripSeparator1, toolStripMenuItem4 });
+            ProjectContextMenu.Name = "CompanyContextMenu";
+            ProjectContextMenu.Size = new Size(168, 76);
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(167, 22);
+            toolStripMenuItem2.Text = "Добавить проект";
+            // 
+            // toolStripMenuItem3
+            // 
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(167, 22);
+            toolStripMenuItem3.Text = "Изменить";
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(164, 6);
+            // 
+            // toolStripMenuItem4
+            // 
+            toolStripMenuItem4.Name = "toolStripMenuItem4";
+            toolStripMenuItem4.Size = new Size(167, 22);
+            toolStripMenuItem4.Text = "Удалить";
+            // 
+            // ActivityContextMenu
+            // 
+            ActivityContextMenu.Items.AddRange(new ToolStripItem[] { toolStripMenuItem5, toolStripMenuItem6, toolStripSeparator2, toolStripMenuItem7 });
+            ActivityContextMenu.Name = "CompanyContextMenu";
+            ActivityContextMenu.Size = new Size(191, 98);
+            // 
+            // toolStripMenuItem5
+            // 
+            toolStripMenuItem5.Name = "toolStripMenuItem5";
+            toolStripMenuItem5.Size = new Size(190, 22);
+            toolStripMenuItem5.Text = "Добавить активность";
+            // 
+            // toolStripMenuItem6
+            // 
+            toolStripMenuItem6.Name = "toolStripMenuItem6";
+            toolStripMenuItem6.Size = new Size(190, 22);
+            toolStripMenuItem6.Text = "Изменить";
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(187, 6);
+            // 
+            // toolStripMenuItem7
+            // 
+            toolStripMenuItem7.Name = "toolStripMenuItem7";
+            toolStripMenuItem7.Size = new Size(190, 22);
+            toolStripMenuItem7.Text = "Удалить";
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(treeView);
-            Name = "Form1";
+            Name = "MainForm";
             Text = "ИС \"Проектные активности\"";
+            CompanyContextMenu.ResumeLayout(false);
+            ProjectContextMenu.ResumeLayout(false);
+            ActivityContextMenu.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -65,5 +174,20 @@
 
         private TreeView treeView;
         private Button button1;
+        private ContextMenuStrip CompanyContextMenu;
+        private ToolStripMenuItem добавитьToolStripMenuItem;
+        private ToolStripMenuItem изменитьToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem1;
+        private ToolStripMenuItem удалитьToolStripMenuItem;
+        private ContextMenuStrip ProjectContextMenu;
+        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem toolStripMenuItem3;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem toolStripMenuItem4;
+        private ContextMenuStrip ActivityContextMenu;
+        private ToolStripMenuItem toolStripMenuItem5;
+        private ToolStripMenuItem toolStripMenuItem6;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripMenuItem toolStripMenuItem7;
     }
 }
