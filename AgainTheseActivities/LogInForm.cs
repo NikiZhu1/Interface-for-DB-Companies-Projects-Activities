@@ -36,9 +36,6 @@ namespace AgainTheseActivities
 
             if (User.Login(Login, Password))
             {
-                //int userId = Convert.ToInt32(table.Rows[0]["userId"]);
-                //string userName = table.Rows[0]["userName"].ToString();
-
                 MainForm mainForm = new(Login);
                 mainForm.Show();
 
@@ -46,7 +43,7 @@ namespace AgainTheseActivities
             }
             else
             {
-                MessageBox.Show("Неправильный логин или пароль.");
+                MessageBox.Show("Неправильный логин или пароль", "Ошибка авторизации", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

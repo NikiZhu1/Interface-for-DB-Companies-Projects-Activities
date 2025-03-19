@@ -97,13 +97,13 @@ namespace AgainTheseActivities
                 else
                 {
                     MySqlCommand command = new(
-                        @"INSERT INTO Users (login, hash, registration) 
-                          VALUES (@userLogin, @hash, @registrationDate)",
+                        @"INSERT INTO Users (login, hash, registration, isActive) 
+                          VALUES (@userLogin, @hash, @registrationDate, 1)",
                     db.GetConnection());
 
                     command.Parameters.Add("@userLogin", MySqlDbType.VarChar).Value = userLogin;
                     command.Parameters.Add("@hash", MySqlDbType.VarChar).Value = userPassword;
-                    command.Parameters.Add("@registrationDate", MySqlDbType.VarChar).Value = DateTime.Now;
+                    command.Parameters.Add("@registrationDate", MySqlDbType.VarChar).Value = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
 
                     if (command.ExecuteNonQuery() == 1)
                     {

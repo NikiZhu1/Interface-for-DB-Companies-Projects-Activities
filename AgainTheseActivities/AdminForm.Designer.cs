@@ -29,15 +29,36 @@
         private void InitializeComponent()
         {
             listView1 = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
             SuspendLayout();
             // 
             // listView1
             // 
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
             listView1.Location = new Point(1, 1);
             listView1.Name = "listView1";
             listView1.Size = new Size(798, 411);
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Логин";
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Админ";
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Активен";
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Дата регистрации";
             // 
             // AdminForm
             // 
@@ -53,5 +74,9 @@
         #endregion
 
         private ListView listView1;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
     }
 }

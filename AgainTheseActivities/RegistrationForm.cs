@@ -56,8 +56,6 @@ namespace AgainTheseActivities
 
                 this.Hide();
             }
-
-
         }
     }
 }
